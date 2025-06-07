@@ -14,6 +14,7 @@
 		android:background="#0C0517">
 
 		<LinearLayout
+			android:layout_marginTop="20dp"
 			android:layout_width="match_parent"
 			android:layout_height="wrap_content"
 			android:orientation="vertical"
@@ -28,12 +29,14 @@
 				android:layout_marginBottom="28dp">
 
 				<TextView
+					android:id="@+id/backButton"
 					android:layout_width="wrap_content"
 					android:layout_height="wrap_content"
-					android:text="<"
+					android:text="&lt;"
 					android:textColor="#FFFFFF"
 					android:textSize="20sp"
 					android:layout_marginEnd="16dp"/>
+
 
 				<TextView
 					android:layout_width="301dp"
@@ -97,28 +100,54 @@
 				android:layout_height="wrap_content"
 				android:orientation="horizontal"
 				android:gravity="center_vertical"
-				android:layout_marginBottom="24dp">
+				android:layout_marginTop="16dp"
+				android:weightSum="1">
+
+				<!-- Khối Remember me (checkbox + text) -->
 				<LinearLayout
-					android:id="@+id/rr1e82smjdgo"
-					android:layout_width="16dp"
-					android:layout_height="16dp"
-					android:background="@drawable/s00000000sw1cr10bffffff"
-					android:orientation="vertical"></LinearLayout>
-				<TextView
+					android:id="@+id/layoutRemember"
 					android:layout_width="0dp"
 					android:layout_height="wrap_content"
-					android:layout_weight="1"
-					android:text="Remember me"
-					android:textColor="#A3A3A3"
-					android:textSize="14sp" />
+					android:layout_weight="0.6"
+					android:layout_marginTop="-12dp"
+					android:orientation="horizontal"
+					android:gravity="center_vertical"
+					android:clickable="true"
+					android:focusable="true"
+					android:minHeight="48dp"
+					android:paddingTop="12dp"
+					android:paddingBottom="8dp"
+					android:paddingStart="4dp"
+					android:paddingEnd="4dp">
 
+					<View
+						android:id="@+id/boxRemember"
+						android:layout_width="16dp"
+						android:layout_height="16dp"
+						android:background="@drawable/box_unchecked" />
+
+					<TextView
+						android:id="@+id/textRemember"
+						android:layout_width="wrap_content"
+						android:layout_height="wrap_content"
+						android:text="Remember me"
+						android:textColor="#A3A3A3"
+						android:textSize="14sp" />
+
+				</LinearLayout>
+
+
+				<!-- Forgot Password? -->
 				<TextView
 					android:id="@+id/tvForgotPassword"
-					android:layout_width="wrap_content"
+					android:layout_width="0dp"
 					android:layout_height="wrap_content"
+					android:layout_weight="0.4"
+					android:gravity="end"
+					android:layout_marginTop="-12dp"
 					android:text="Forgot Password?"
 					android:textColor="#F39A15"
-					android:textSize="14sp"
+					android:textSize="16sp"
 					android:textStyle="bold" />
 			</LinearLayout>
 			<!-- Continue Button -->
@@ -183,7 +212,7 @@
 				android:id="@+id/tvLogin"
 				android:layout_width="match_parent"
 				android:layout_height="wrap_content"
-				android:text="New to GamerPal? Sign Up >"
+				android:text="New to GamerPal? Sign Up "
 				android:textColor="#FFFFFF"
 				android:textSize="14sp"
 				android:gravity="center"
