@@ -16,7 +16,7 @@ public class GoogleModal extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.google_modal); // Đổi tên XML nếu khác
+        setContentView(R.layout.google_modal); 
 
         // Ánh xạ View
         btnContinue = findViewById(R.id.btnContinue);
@@ -32,7 +32,6 @@ public class GoogleModal extends AppCompatActivity {
 
     private void onGoogleSignInSuccess() {
         Intent intent = new Intent(GoogleModal.this, SignUp05.class);
-        // Có thể truyền dữ liệu Google account ở đây, ví dụ: intent.putExtra("googleEmail", userEmail);
         startActivity(intent);
         finish();
     }
