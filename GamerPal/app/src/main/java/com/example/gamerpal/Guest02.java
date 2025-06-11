@@ -14,7 +14,7 @@ public class Guest02 extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.guest_flow_02); // Đảm bảo tên file XML đúng
+        setContentView(R.layout.guest_flow_02); 
 
         // Gán view
         btnContinue = findViewById(R.id.roz7lejsdhme);
