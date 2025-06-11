@@ -28,7 +28,7 @@ public class SignUpSocial07 extends AppCompatActivity {
         // Lấy tên người dùng từ Intent (nếu có)
         String userName = getIntent().getStringExtra("username");
         if (userName == null || userName.isEmpty()) {
-            userName = "JohnDoe"; // Mặc định
+            userName = "tandu"; // Mặc định
         }
 
         txtInstruction.setText("Great choices, " + userName + "!");
@@ -37,7 +37,7 @@ public class SignUpSocial07 extends AppCompatActivity {
         new Handler().postDelayed(() -> {
             Intent intent = new Intent(SignUpSocial07.this, HomeActivity.class);
             startActivity(intent);
-            finish(); // Đóng màn hiện tại
+            finish();
         }, DELAY_MILLIS);
     }
 }
