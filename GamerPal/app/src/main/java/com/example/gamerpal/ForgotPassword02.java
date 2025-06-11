@@ -31,10 +31,10 @@ public class ForgotPassword02 extends AppCompatActivity {
         setContentView(R.layout.forgot_password_02);
 
         // Ánh xạ View
-        tvInstruction = findViewById(R.id.tvInstruction); // cần thêm ID trong XML
+        tvInstruction = findViewById(R.id.tvInstruction); 
         tvResendCode = findViewById(R.id.ro5cvxh2y7ro);
         codeInput = findViewById(R.id.codeInput);
-        btnContinue = findViewById(R.id.btnContinue); // thêm ID cho LinearLayout chứa nút Continue
+        btnContinue = findViewById(R.id.btnContinue); 
 
         // Lấy dữ liệu từ ForgotPassword
         Intent intent = getIntent();
@@ -61,7 +61,7 @@ public class ForgotPassword02 extends AppCompatActivity {
             @Override
             public void onClick(View widget) {
                 Toast.makeText(ForgotPassword02.this, "Code sent again!", Toast.LENGTH_SHORT).show();
-                // TODO: Gửi lại mã nếu muốn
+        
             }
         }, start, end, Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
 
