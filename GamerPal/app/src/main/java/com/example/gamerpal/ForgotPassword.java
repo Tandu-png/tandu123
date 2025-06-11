@@ -17,8 +17,7 @@ public class ForgotPassword extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.forgot_password_01); // đổi đúng tên XML bạn đặt
-
+        setContentView(R.layout.forgot_password_01); 
         inputEmailPhone = findViewById(R.id.rdqf0z7r6cho); // Email or phone input
         btnSendCode = findViewById(R.id.roz7lejsdhme);     // Send Reset Code button
 
