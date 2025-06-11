@@ -16,7 +16,7 @@ public class Guest03 extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.guest_flow_03); // Đảm bảo đúng layout file
+        setContentView(R.layout.guest_flow_03); 
 
         btnContinue = findViewById(R.id.roz7lejsdhme);
         txtSkipIntro = findViewById(R.id.txtSkipIntro);
