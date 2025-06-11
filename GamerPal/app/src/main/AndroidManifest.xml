@@ -39,8 +39,6 @@
         <activity android:name=".ForgotPassword02" />
         <activity android:name=".ForgotPassword03" />
 
-        <!-- Nếu bạn có HomeActivity, nhớ khai báo ở đây -->
-        <!-- <activity android:name=".HomeActivity" /> -->
 
     </application>
 
