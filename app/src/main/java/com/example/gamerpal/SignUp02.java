@@ -51,7 +51,7 @@ public class SignUp02 extends AppCompatActivity {
 
         // Nút Continue → kiểm tra mã xác nhận
         continueButton.setOnClickListener(v -> {
-            String code = editTextCode.getText().toString().trim();
+            String code = editTextCode.getText().toString().trim(); 
             if (code.isEmpty()) {
                 Toast.makeText(SignUp02.this, "Please enter the confirmation code", Toast.LENGTH_SHORT).show();
             } else {
