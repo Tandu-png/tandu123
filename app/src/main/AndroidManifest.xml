@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.example.gamerpal">
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.GamerPal">
+
+        <!-- Activity chính: MainActivity -->
+        <activity
+            android:name=".Lading_page"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <!-- Các Activity khác -->
+        <activity android:name=".GoogleModal" />
+        <activity android:name=".HomeActivity" />
+        <activity android:name=".SignUp01" />
+        <activity android:name=".SignUp02" />
+        <activity android:name=".SignUp05" />
+        <activity android:name=".SignUpSocial01" />
+        <activity android:name=".SignUpSocial6" />
+        <activity android:name=".SignUpSocial07" />
+        <activity android:name=".Guest01" />
+        <activity android:name=".Guest02" />
+        <activity android:name=".Guest03" />
+        <activity android:name=".Guest04" />
+        <activity android:name=".Login" />
+        <activity android:name=".ForgotPassword" />
+        <activity android:name=".ForgotPassword02" />
+        <activity android:name=".ForgotPassword03" />
+
+
+    </application>
+
+</manifest>
