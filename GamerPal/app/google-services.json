@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "1063948148239",
+    "project_id": "gamepal-3912b",
+    "storage_bucket": "gamepal-3912b.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1063948148239:android:aee9de756df5c2d62d0d7a",
+        "android_client_info": {
+          "package_name": "com.example.gamerpal"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAuhcV6Ppe7yb7rcYzm3ytUn2LMJI4wYms"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

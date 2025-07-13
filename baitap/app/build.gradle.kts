@@ -3,11 +3,11 @@ plugins {
 }
 
 android {
-    namespace = "com.example.gamerpal"
+    namespace = "com.example.baitap"
     compileSdk = 35
 
     defaultConfig {
-        applicationId = "com.example.gamerpal"
+        applicationId = "com.example.baitap"
         minSdk = 24
         targetSdk = 35
         versionCode = 1
@@ -37,7 +37,6 @@ dependencies {
     implementation(libs.material)
     implementation(libs.activity)
     implementation(libs.constraintlayout)
-    implementation(libs.ui.graphics.android)
     testImplementation(libs.junit)
     androidTestImplementation(libs.ext.junit)
     androidTestImplementation(libs.espresso.core)
