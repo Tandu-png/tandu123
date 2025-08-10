@@ -37,7 +37,7 @@ public class SignUp01 extends AppCompatActivity {
         tvCharCountDisplay1 = findViewById(R.id.tvCharCountDisplay1);
         tvCharCountDisplay = findViewById(R.id.tvCharCountDisplay);
         btnContinue = findViewById(R.id.btnContinue);
-        backButton = findViewById(R.id.textViewBack); // thêm ánh xạ backButton
+        backButton = findViewById(R.id.textViewBack);
 
         @SuppressLint({"MissingInflatedId", "LocalSuppress"})
         TextView tvTerms = findViewById(R.id.tvTerms);

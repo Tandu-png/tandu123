@@ -13,7 +13,7 @@ public class Guest01 extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.guest_flow_01); // tên file XML bạn gửi
+        setContentView(R.layout.guest_flow_01); 
 
         // Tự động chuyển sang màn hình Landing_page sau 3 giây
         new Handler().postDelayed(() -> {

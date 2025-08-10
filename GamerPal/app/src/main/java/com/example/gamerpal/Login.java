@@ -31,7 +31,7 @@ public class Login extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_login_01);  // Đổi thành tên file XML của bạn
+        setContentView(R.layout.activity_login_01); 
 
         // Ánh xạ view
         backButton = findViewById(R.id.backButton);
@@ -77,10 +77,7 @@ public class Login extends AppCompatActivity {
                 etPassword.requestFocus();
                 return;
             }
-
-            // TODO: Thực hiện kiểm tra đăng nhập với server hoặc logic khác
-            // Hiện demo: nếu username = "admin" và password = "123456" thì đăng nhập thành công
-            if (email.equals("admin") && password.equals("123456")) {
+            if (email.equals("tandu111@gmail.com") && password.equals("Tandu15102006@")) {
                 Toast.makeText(Login.this, "Login successful", Toast.LENGTH_SHORT).show();
                 // Chuyển sang màn hình Home (ví dụ)
                 Intent intent = new Intent(Login.this, HomeActivity.class);
@@ -93,7 +90,7 @@ public class Login extends AppCompatActivity {
 
         // Xử lý nút Sign Up With Google
         btnSignUpWithG.setOnClickListener(v -> {
-            // TODO: Xử lý đăng nhập Google tại đây
+            //Xử lý đăng nhập Google 
             Toast.makeText(Login.this, "Sign in with Google clicked", Toast.LENGTH_SHORT).show();
 
             // Ví dụ: chuyển sang màn hình đăng ký tiếp theo
@@ -113,18 +110,12 @@ public class Login extends AppCompatActivity {
         int loginEnd = loginStart + "Sign Up".length();
 
         if (loginStart != -1) {
-            // Tạo hiệu ứng gradient nếu cần (hoặc dùng Shader có sẵn)
-            // Ví dụ tạo shader đơn giản nếu bạn chưa có shader:
-
             TextPaint paint = new TextPaint();
             shader = new LinearGradient(0, 0, 0, paint.getTextSize(),
             new int[]{Color.parseColor("#F39A15"), Color.parseColor("#F39A15")},
             null, Shader.TileMode.CLAMP);
-
-
             // Áp dụng ShaderSpan
             loginSpan.setSpan(new SignUpSocial01.ShaderSpan(shader), loginStart, loginEnd, Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
-
             // Áp dụng click riêng cho "Sign Up"
             loginSpan.setSpan(new android.text.style.ClickableSpan() {
                 @Override

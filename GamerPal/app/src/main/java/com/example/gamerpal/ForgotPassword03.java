@@ -15,11 +15,11 @@ public class ForgotPassword03 extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.forgot_password_03); // đổi đúng tên XML bạn đặt
+        setContentView(R.layout.forgot_password_03); 
 
         etPassword = findViewById(R.id.etPassword);
         etConfirmPassword = findViewById(R.id.etConfirmPassword);
-        btnReset = findViewById(R.id.roz7lejsdhme); // "Reset Password" layout
+        btnReset = findViewById(R.id.roz7lejsdhme); 
 
         btnReset.setOnClickListener(view -> {
             String password = etPassword.getText().toString();

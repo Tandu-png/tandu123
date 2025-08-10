@@ -29,21 +29,20 @@ public class SignUp02 extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_sign02); // đảm bảo file XML tên là activity_sign02.xml
+        setContentView(R.layout.activity_sign02);
 
         // Ánh xạ view
         editTextCode = findViewById(R.id.rdqf0z7r6cho);
         continueButton = findViewById(R.id.roz7lejsdhme);
         resendCodeText = findViewById(R.id.ro5cvxh2y7ro);
         backButton = findViewById(R.id.textViewBack);
-
         // Nút "Continue"
         continueButton.setOnClickListener(v -> {
             String code = editTextCode.getText().toString().trim();
             if (code.isEmpty()) {
                 Toast.makeText(SignUp02.this, "Please enter the confirmation code", Toast.LENGTH_SHORT).show();
             } else {
-                // TODO: kiểm tra mã code thực tế nếu có backend
+                // kiểm tra mã code thực tế nếu có backend
                 Intent intent = new Intent(SignUp02.this, Login.class); // chuyển sang Login tạm thời
                 startActivity(intent);
             }
