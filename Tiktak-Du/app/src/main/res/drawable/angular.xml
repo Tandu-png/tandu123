@@ -1,0 +1,13 @@
+<shape xmlns:android="http://schemas.android.com/apk/res/android"
+    android:shape="oval">
+
+    <!-- Gradient xoay 360° với 4 điểm màu -->
+    <gradient
+        android:type="sweep"
+        android:useLevel="false"
+        android:startColor="#171717"
+        android:centerColor="#373736"
+        android:endColor="#171717"
+        android:angle="0" />
+
+</shape>
