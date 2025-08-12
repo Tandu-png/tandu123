@@ -1,0 +1,13 @@
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- Vòng ngoài (màu đen) -->
+    <item>
+        <shape android:shape="oval">
+            <solid android:color="#FF0000" />
+        </shape>
+    </item>
+    <item
+        android:width="48dp"
+        android:height="48dp"
+        android:gravity="center">
+    </item>
+</layer-list>
