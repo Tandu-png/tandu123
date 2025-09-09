@@ -1,0 +1,281 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/btn_gradient"
+    android:padding="16dp"
+    tools:context=".Activities.DashboardActivity">
+
+    <!-- Thanh tiêu đề -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Bảng Điều Khiển"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:textColor="@android:color/black"/>
+    </LinearLayout>
+
+    <!-- Thanh chọn loại điểm -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:padding="8dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Chọn loại điểm: "
+            android:textStyle="bold"
+            android:layout_marginEnd="8dp"/>
+
+        <Spinner
+            android:id="@+id/spnLoaiDiem"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:spinnerMode="dropdown"/>
+    </LinearLayout>
+
+    <!-- Nội dung chính -->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
+            <LinearLayout
+                android:id="@+id/layoutMonHoc"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <!-- Số tín chỉ -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        android:text="Số tín chỉ"
+                        android:textStyle="bold"/>
+
+                    <EditText
+                        android:id="@+id/edtSoTinChi"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        android:inputType="number"/>
+                </LinearLayout>
+
+                <!-- Giữa kì -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:paddingTop="8dp">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        android:text="Giữa kì"
+                        android:textStyle="bold"/>
+
+                    <EditText
+                        android:id="@+id/edtGiuaKi"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        android:inputType="numberDecimal"/>
+                </LinearLayout>
+
+                <!-- Thường xuyên -->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Thường xuyên"
+                    android:textStyle="bold"
+                    android:paddingTop="8dp"/>
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rvThuongXuyen"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:nestedScrollingEnabled="false"/>
+
+                <!-- Thực hành -->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Thực hành"
+                    android:textStyle="bold"
+                    android:paddingTop="8dp"/>
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rvThucHanh"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:nestedScrollingEnabled="false"/>
+
+                <!-- Cuối kì -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:paddingTop="8dp">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        android:text="Cuối kì"
+                        android:textStyle="bold"/>
+
+                    <EditText
+                        android:id="@+id/edtCuoiKi"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        android:inputType="numberDecimal"/>
+                </LinearLayout>
+            </LinearLayout>
+
+            <!-- ================== Trung bình học kỳ ================== -->
+            <LinearLayout
+                android:id="@+id/layoutHocKy"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="gone"
+                android:paddingTop="16dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Nhập điểm từng môn trong học kỳ"
+                    android:textStyle="bold"/>
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rvHocKy"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:nestedScrollingEnabled="false"/>
+            </LinearLayout>
+
+            <!-- ================== Điểm cần cải thiện ================== -->
+            <LinearLayout
+                android:id="@+id/layoutCaiThien"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="gone"
+                android:paddingTop="16dp">
+
+                <EditText
+                    android:id="@+id/edtMucTieu"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Mục tiêu cần đạt (ví dụ: 5.0, 7.0)"
+                    android:inputType="numberDecimal"/>
+            </LinearLayout>
+
+            <!-- ================== Điểm tích lũy ================== -->
+            <LinearLayout
+                android:id="@+id/layoutTichLuy"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="gone"
+                android:paddingTop="16dp">
+
+                <EditText
+                    android:id="@+id/edtTongTinChiTruoc"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Tổng số tín chỉ trước đó"
+                    android:inputType="number"/>
+
+                <EditText
+                    android:id="@+id/edtDiemTichLuyTruoc"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Điểm trung bình tích lũy trước đó"
+                    android:inputType="numberDecimal"/>
+            </LinearLayout>
+
+            <!-- Nút bấm -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center"
+                android:paddingTop="16dp">
+
+                <Button
+                    android:id="@+id/btnTinhDiem"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Tính điểm"/>
+
+                <Button
+                    android:id="@+id/btnXoaTrang"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Xóa trắng"
+                    android:layout_marginStart="16dp"/>
+            </LinearLayout>
+
+            <!-- Kết quả -->
+            <TextView
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Kết quả sẽ hiện thị ở đây  "
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:textColor="@android:color/black"
+                android:paddingTop="16dp"
+                android:gravity="center"/>
+            <TextView
+                android:id="@+id/tvThang10"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="kết quả thang 10 :  "
+                android:textStyle="bold"
+                />
+            <TextView
+                android:id="@+id/tvthang4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="kết quả thang 4 :  "
+                android:textStyle="bold"
+                />
+            <TextView
+                android:id="@+id/tvDiemChu"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Điẻm Chữ : "
+                android:textStyle="bold"
+                tools:ignore="InvalidId" />
+
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

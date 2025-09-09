@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "296036209644",
+    "project_id": "scoringapp124123",
+    "storage_bucket": "scoringapp124123.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:296036209644:android:ee661f34c703dae60a66c9",
+        "android_client_info": {
+          "package_name": "com.example.scoringapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "296036209644-7dljbafptusp2ubupsatp1tkd7nksg38.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBDRX3FW3GuF297qcrXrWLzCdwSioynhCU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "296036209644-7dljbafptusp2ubupsatp1tkd7nksg38.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
