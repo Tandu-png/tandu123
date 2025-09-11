@@ -76,4 +76,13 @@ public class MonHoc {
         // ví dụ: 20% TX + 20% TH + 20% GK + 40% CK
         return 0.2 * diemThuongKy + 0.2 * diemThucHanh + 0.2 * giuaKi + 0.4 * diemCuoiKy;
     }
+    public double getDiemTB() {
+
+        double tbThuongKy = (diemThuongKy1 + diemThuongKy2 + diemThuongKy3) / 3.0;
+        double tbThucHanh = (diemThucHanh1 + diemThucHanh2 + diemThucHanh3) / 3.0;
+        return tbThuongKy + tbThucHanh; // hoặc return (tbThuongKy + tbThucHanh) / 2;
+
+    }
+
+
 }

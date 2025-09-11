@@ -90,6 +90,7 @@ public class MonHocAdapter extends RecyclerView.Adapter<MonHocAdapter.MonHocView
             edtDiemThuongKy2 = itemView.findViewById(R.id.edtDiemThuongKy2);
             edtDiemThuongKy3 = itemView.findViewById(R.id.edtDiemThuongKy3);
             edtDiemThucHanh1 = itemView.findViewById(R.id.edtDiemThucHanh1);
+            edtGiuaKy = itemView.findViewById(R.id.edtGiuaKy);
             edtDiemThucHanh2 = itemView.findViewById(R.id.edtDiemThucHanh2);
             edtDiemThucHanh3 = itemView.findViewById(R.id.edtDiemThucHanh3);
             edtDiemCuoiKy = itemView.findViewById(R.id.edtDiemCuoiKy);

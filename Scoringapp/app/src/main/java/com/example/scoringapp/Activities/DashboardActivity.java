@@ -1,5 +1,7 @@
 package com.example.scoringapp.Activities;
 
+import android.annotation.SuppressLint;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.text.TextUtils;
 import android.view.View;
@@ -26,10 +28,13 @@ public class DashboardActivity extends AppCompatActivity {
 
     private MonHocAdapter thuongXuyenAdapter, thucHanhAdapter;
 
+    @SuppressLint("MissingInflatedId")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_dashboard);
+        String role = getIntent().getStringExtra("role");
+        Toast.makeText(this, "Chào mừng " + role, Toast.LENGTH_SHORT).show();
 
         // Ánh xạ view
         spnLoaiDiem = findViewById(R.id.spnLoaiDiem);
@@ -37,7 +42,6 @@ public class DashboardActivity extends AppCompatActivity {
         layoutHocKy = findViewById(R.id.layoutHocKy);
         layoutCaiThien = findViewById(R.id.layoutCaiThien);
         layoutTichLuy = findViewById(R.id.layoutTichLuy);
-
         edtSoTinChi = findViewById(R.id.edtSoTinChi);
         edtGiuaKi = findViewById(R.id.edtGiuaKi);
         edtCuoiKi = findViewById(R.id.edtCuoiKi);
@@ -53,7 +57,7 @@ public class DashboardActivity extends AppCompatActivity {
         btnXoaTrang = findViewById(R.id.btnXoaTrang);
 
         tvThang10 = findViewById(R.id.tvThang10);
-        tvThang4 = findViewById(R.id.tvthang4);
+        tvThang4 = findViewById(R.id.tvThang4);
         tvDiemChu = findViewById(R.id.tvDiemChu);
 
         // Cài đặt Spinner
@@ -61,7 +65,6 @@ public class DashboardActivity extends AppCompatActivity {
         ArrayAdapter<String> adapter = new ArrayAdapter<>(this, android.R.layout.simple_spinner_item, loaiDiem);
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         spnLoaiDiem.setAdapter(adapter);
-
         spnLoaiDiem.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
             public void onItemSelected(AdapterView<?> parent, View view, int pos, long id) {
@@ -99,7 +102,7 @@ public class DashboardActivity extends AppCompatActivity {
         thuongXuyenAdapter = new MonHocAdapter(listThuongXuyen);
         rvThuongXuyen.setAdapter(thuongXuyenAdapter);
 
-// RecyclerView Thực hành
+    // RecyclerView Thực hành
         rvThucHanh.setLayoutManager(new LinearLayoutManager(this));
         List<MonHoc> listThucHanh = new ArrayList<>();
         listThucHanh.add(new MonHoc("TH1", 0, 0, 0, 0, 0));
@@ -119,7 +122,7 @@ public class DashboardActivity extends AppCompatActivity {
     }
 
     private void tinhDiem() {
-        double ketQua = 0.0;
+        double ketQua =0.0;
         try {
             // Tính điểm môn học
             if (layoutMonHoc.getVisibility() == View.VISIBLE) {

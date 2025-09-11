@@ -76,6 +76,13 @@
             android:hint="TH3"
             android:inputType="numberDecimal"
             android:layout_marginStart="8dp" />
+        <EditText
+            android:id="@+id/edtGiuaKy"
+            android:layout_width="60dp"
+            android:layout_height="wrap_content"
+            android:hint="GK"
+            android:inputType="numberDecimal"
+            android:layout_marginStart="8dp" />
 
         <!-- Điểm cuối kỳ -->
         <EditText
